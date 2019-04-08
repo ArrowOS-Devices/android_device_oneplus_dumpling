@@ -24,6 +24,9 @@ $(call inherit-product, device/oneplus/dumpling/device.mk)
 # Inherit some common arrow stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 PRODUCT_NAME := arrow_dumpling
 PRODUCT_DEVICE := dumpling
 PRODUCT_MANUFACTURER := OnePlus
